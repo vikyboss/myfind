@@ -41,18 +41,6 @@ int find_recurs_print(const char *dname, const char **ignore_pnames)
                 break;
             }
         }
-#if 0
-        // using pointers
-        char **igds = ignore_pnames;
-        char *i;
-        while ((i = *igds++) != NULL) {
-            if (!strcmp(pname, i)) {
-                ignore = true; 
-                printf("ignoring %s\n", i);
-                break;
-            }
-        }
-#endif
         if (ignore)
             continue;
 
